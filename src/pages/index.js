@@ -14,7 +14,7 @@ import Appbar from "@/components/Appbar";
 const LoginPage = () => {
    const { data: session, status } = useSession();
   const router = useRouter();
-//   const [shouldRender, setShouldRender] = useState(false);
+  const [shouldRender, setShouldRender] = useState(false);
 
   useEffect(() => {
     const checkSessionAndRedirect = async () => {
