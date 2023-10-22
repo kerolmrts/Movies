@@ -2,9 +2,6 @@
 
 Este projeto foi desenvolvido como parte da disciplina de Desenvolvimento Web com React do Instituto Infnet. O objetivo principal deste projeto é criar um aplicativo da web que utiliza a API da TMDB (The Movie Database) para exibir informações sobre filmes e séries de TV.
 
-## Descrição do Projeto
-
-
 ### Funcionalidades
 
 - Pesquisa de filmes e séries de TV por título.
