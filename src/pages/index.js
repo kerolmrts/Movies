@@ -76,27 +76,32 @@ const LoginPage = () => {
 
   return (
     <Layout>
-      <Appbar />
-      <main className="h-full min-h-screen grid grid-cols-3">
-  <div className="col-span-1 p-6"> 
-    <h1 className="p-20 font-extrabold text-4xl text-center text-zinc-500 ">
-    Junte-se a nós e participe da comunidade de cinéfilos para desvendar as maravilhas do mundo do cinema!
-    </h1>
-    <h2 className="font-bold  text-center text-zinc-500">
-    Faça login para acessar o conteúdo:
-    </h2>
-    <div className="flex w-full my-10 items-center justify-center">
-      <Button onClick={() => signIn("google")}>Sign in</Button>
-    </div>
-  </div>
-  <div className="col-span-2">
-   <img src="img_movie.jpg"
-   className="w-full h-screen"/>
-  </div>
-</main>
-      <Footer />
-    </Layout>
-  );
-};
+    <Appbar />
+    <div className="relative">
+      <video
+        autoPlay
+        loop
+        muted
+        src="/video_login.mp4"
+        type="video/mp4"
+        className="w-full h-screen object-cover z-0"
+      />
 
+      <div className="absolute inset-0 bg-zinc-700/40 flex flex-col items-center justify-center text-center z-10 text-white">
+        <h1 className="text-6xl font-extrabold m-10">
+          Junte-se a nós e participe da comunidade de cinéfilos e desvende as maravilhas do mundo do cinema!
+        </h1>
+        <h2 className="font-extrabold text-2xl mb-8">
+          Faça login para acessar o conteúdo:
+        </h2>
+        <div className="flex gap-5">
+        <button className="text-2xl rounded bg-zinc-100/40 p-1 " onClick={() => signIn("google")}>Login</button>
+        <button className="text-2xl rounded bg-zinc-100/40 p-1 " onClick={() => signIn("google")}>Criar Conta</button> 
+      </div>
+      </div>
+    </div>
+    <Footer />
+  </Layout>
+);
+};
 export default LoginPage;

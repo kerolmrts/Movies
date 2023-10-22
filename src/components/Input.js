@@ -7,7 +7,7 @@ export function Input({ icon: Icon, ...rest }) {
         {Icon && <Icon size={20} />}
       <input
         {...rest}
-        className="h-8 w-full pl-2 text-white bg-transparent border-0 "
+        className="h-10 w-full pl-2 text-white bg-transparent border-0 "
       />
       <svg className="ml-16"></svg>
     </div>

@@ -6,6 +6,7 @@ import { useState } from "react";
 import { useSession } from 'next-auth/react';
 import { Footer } from "@/components/Footer";
 import CompleteProfileForm from "@/components/CompleteProfileForm";
+import Bottom from "@/components/Bottom";
 
 
 function Perfil() {
@@ -39,6 +40,7 @@ function Perfil() {
         )}
       </div>
     </div>
+    <Bottom/>
     <Footer />
   </Layout>
 );

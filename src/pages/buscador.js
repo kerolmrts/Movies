@@ -12,6 +12,7 @@ import { Input } from "@/components/Input";
 import Banner from "@/components/Banner";
 import Drawer from "@/components/Drawer";
 import { Card } from "@/components/Card";
+import Bottom from "@/components/Bottom";
 
 function Buscador() {
   const { data: session, status } = useSession();
@@ -31,7 +32,7 @@ function Buscador() {
       if (status === "loading") return;
 
       if (!session) {
-        router.push("/Login");
+        router.push("/");
       } else {
         setShouldRender(true);
       }
@@ -102,13 +103,11 @@ function Buscador() {
           ></Drawer>
           <div className="flex w-full flex-col">
             <Banner>
+              <div className="flex flex-col">
               <h1 className="text-white text-shadow-lg border-4 border-gray-800 p-4 transition-transform hover:scale-105 cursor-pointer">
                 Busque seus filmes favoritos
               </h1>
-            </Banner>
-            <div className="flex flex-col w-full my-10 items-center justify-center">
-              <div className="flex flex-col">
-                <form className="mt-36" onSubmit={handleSearch}>
+                <form className="text-base" onSubmit={handleSearch}>
                   <Input
                     placeholder="Pesquisar pelo título"
                     type="text"
@@ -121,7 +120,10 @@ function Buscador() {
                     <InputButton onClick={() => setSearchTerm("")}>Limpar</InputButton>
                   </div>
                 </form>
-              </div>
+                </div>
+          
+            </Banner>
+                    
               {searchResults.length > 0 && (
                 <div>
                   <h2 className="mb-5">Resultados da busca:</h2>
@@ -142,10 +144,11 @@ function Buscador() {
                   </ul>
                 </div>
               )}
-            </div>
+      
           </div>
         </div>
       </div>
+      <Bottom />
       <Footer />
     </Layout>
   );
