@@ -49,6 +49,8 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias e bibliotecas:
   
 - Uma chave de API da TMDB. Você pode obtê-la em [https://www.themoviedb.org/documentation/api](https://www.themoviedb.org/documentation/api).
 
+- Criar o arquivo .env.local
+
 ### Instalação
 Execute o servidor de desenvolvimento
 
@@ -69,5 +71,4 @@ https://movies-phi-rosy.vercel.app/
 Este projeto foi desenvolvido por Kerolayne Martins como parte da disciplina de Desenvolvimento Web com React do Instituto Infnet.
 
 
-
-![ezgif com-gif-maker (2)](https://github.com/kerolmrts/Movies/assets/143285411/c312c9be-1659-4eaf-bb38-12eca04fb859)
+![ezgif com-gif-maker (3)](https://github.com/kerolmrts/Movies/assets/143285411/3d985f74-69bb-43be-a543-1400def391c3)
