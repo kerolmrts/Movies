@@ -31,21 +31,21 @@ function Appbar({ onMenuToggle }) {
         {menuOpen && (
           <nav className="space-y-5 mt-5">
             <Link
-              href="/"
+              href="/home"
               className="flex items-center gap-3 text-sm font-semibold text-zinc-200"
             >
               <HomeIcon />
               Início
             </Link>
             <Link
-              href="/Login"
+              href="/"
               className="flex items-center gap-3 text-sm font-semibold text-zinc-200"
             >
               <User />
               Entrar
             </Link>
             <Link
-              href="/Buscador"
+              href="/buscador"
               className="flex items-center gap-3 text-sm font-semibold text-zinc-200"
             >
               <Search />
