@@ -54,7 +54,7 @@ const LoginPage = () => {
                   alt="User's image"
                 />
                 <div className="flex gap-2">
-                  <Button onClick={() => router.push("/Perfil")}>
+                  <Button onClick={() => router.push("/home")}>
                     Completar Cadastro
                   </Button>
                   <Button

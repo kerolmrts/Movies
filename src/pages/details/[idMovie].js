@@ -40,7 +40,7 @@ function Details() {
               isOpen={isDrawerOpen}
               onClose={handleMenuToggle}
             ></Drawer>
-            <Link href="/">Voltar</Link>
+            <Link href="/home">Voltar</Link>
             <h1 className="font-semibold text-3xl m-10">
               <p>Filme:</p>
             </h1>
