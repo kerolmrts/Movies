@@ -14,7 +14,7 @@ const Drawer = ({ isOpen, onClose, ...rest}) => {
   const router = useRouter();
   const handleSignOut = async () => {
    await signOut(); 
-   router.push('/Login'); 
+   router.push('/'); 
   };
   return (
     
