@@ -49,6 +49,17 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias e bibliotecas:
   
 - Uma chave de API da TMDB. Você pode obtê-la em [https://www.themoviedb.org/documentation/api](https://www.themoviedb.org/documentation/api).
 
+### Instalação
+Execute o servidor de desenvolvimento
+
+npm run dev
+# ou
+yarn dev
+# ou
+pnpm dev
+
+Abra http://localhost:3000 com seu navegador para ver o resultado.
+
 ### DEPLOY
 Você pode acessar o projeto aqui:
 https://movies-phi-rosy.vercel.app/
