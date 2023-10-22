@@ -21,9 +21,9 @@ const LoginPage = () => {
       if (status === "loading") return;
 
       if (session) {
-        router.push("/");
-    //   } else {
-    //     setShouldRender(true);
+        router.push("/home");
+      } else {
+        setShouldRender(true);
       }
     };
 
@@ -32,9 +32,9 @@ const LoginPage = () => {
   }, [session, status, router]);
 
 
-//   if (!shouldRender) {
-//     return null;
-//   }
+  if (!shouldRender) {
+    return null;
+  }
 
   if (session) {
     return (
