@@ -1,4 +1,4 @@
-import { Home as HomeIcon, Search, User, ArrowRight, ArrowLeft } from 'lucide-react';
+import { Home as HomeIcon, Search, User, ArrowRight, ArrowLeft, Star } from 'lucide-react';
 import Link from 'next/link';
 import React, {useContext} from "react";
 import { ThemeContext } from '@/contexts/ThemeContext';
@@ -77,6 +77,10 @@ const Drawer = ({ isOpen, onClose, ...rest}) => {
           <Link href="/buscador" className="flex items-center gap-3 text-sm font-semibold">
             <Search />
           Buscador
+          </Link>
+          <Link href="/favoritos" className="flex items-center gap-3 text-sm font-semibold ">
+            <Star />
+           Favoritos
           </Link>
         </nav>
 

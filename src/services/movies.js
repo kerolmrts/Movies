@@ -1,4 +1,87 @@
 
+export async function getFilmesFavoritos() {
+  
+  try {
+  
+    const options = {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+          }
+    };
+
+    const response = await fetch('http://localhost:4000/movies', options);
+
+ 
+    if (!response.ok) {
+      throw new Error(`Erro ao buscar filmes favoritos: ${response.status} - ${response.statusText}`);
+    }
+
+    const data = await response.json();
+    const filmes = data.map((movie) => {
+      return {
+        titulo: movie.title,
+        id: movie.id,
+        categoria: movie.genre_ids ? movie.genre_ids.join(',') : '',
+        dataLancamento: movie.release_date,
+        selecao: "novo", 
+        sinopse: movie.overview,
+        imagem: `${movie.poster_path}`,
+        Votos: movie.vote_average
+      };
+    });
+    
+    return filmes;
+
+  } catch (error) {
+    console.error('Erro ao buscar filmes em tendência:', error);
+    return [];
+  }
+}
+
+export const addMovie = async (newMovieData) => {
+  try {
+     const response = await fetch("http://localhost:4000/movies", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newMovieData),
+    });
+
+    if (!response.ok) {
+      throw new Error(
+        `Erro ao adicionar filme: ${response.status} - ${response.statusText}`
+      );
+    }
+
+    fetchFilmes();
+  } catch (error) {}
+};
+
+export const deleteMovieById = async (id) => {
+   try {
+    const response = await fetch(
+      `http://localhost:4000/movies/${id}`,
+      {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        }
+      }
+    );
+    if (response.ok) {
+      const data = await response.json();
+      return data;
+    }
+  } catch (error) {
+    console.error("Erro ao deletar o filme", error);
+    return [];
+  }
+};
+
+
+
 export async function getFilmes() {
   
   try {
@@ -40,6 +123,9 @@ export async function getFilmes() {
     return [];
   }
 }
+
+
+
 
 export async function getMovieTitle() {
   try{

@@ -1,7 +1,11 @@
 import React from "react";
 import Link from "next/link";
+import {useRouter} from "next/router";
 
-export function Card({ titulo, srcImage, dataLancamento, id }) {
+
+
+export function Card({ titulo, srcImage, dataLancamento, id, onDelete }) {
+  const router = useRouter();
   return (
     <section>
       <div>
@@ -31,6 +35,10 @@ export function Card({ titulo, srcImage, dataLancamento, id }) {
               Data de Lançamento não disponível
             </p>
           )}
+          {router.pathname == "/favoritos" && (
+            <button onClick={onDelete}>Delete</button>
+          
+        )}
         </div>
       </div>
     </section>

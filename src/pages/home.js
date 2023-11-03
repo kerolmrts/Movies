@@ -24,10 +24,6 @@ export default function Home() {
   };
 
   useEffect(() => {
-    console.log(
-      "Aqui são as variáveis de ambiente:",
-      process.env.NEXT_PUBLIC_TESTE
-    );
     const fetchFilmes = async () => {
       const dataMovies = await getFilmes();
       setMovies(dataMovies);
