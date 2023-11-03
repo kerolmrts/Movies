@@ -7,12 +7,16 @@ Este projeto foi desenvolvido como parte da disciplina de Desenvolvimento Web co
 - Pesquisa de filmes e séries de TV por título.
 - Exibição de detalhes, como elenco, classificações, sinopse e data de lançamento.
 - Classificação dos filmes e séries em categorias.
+- Adicionar um filme ou deletar (página de favoritos)
 
 #### Desenvolvimento da Estrutura com React
 
 - Utilização de CSS-in-JS para estilização da aplicação.
 - Realização de operações CRUD com validação.
 - Deploy da aplicação.
+
+### Integração com REST API (repositório: apimovies)
+- Integração com API local para adicionar e deletar filmes
 
 #### Desenvolvimento das App-like Features
 
